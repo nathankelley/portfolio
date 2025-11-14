@@ -2,7 +2,7 @@
 import { useState } from 'react'; }
 
 export default function ProjectCard({ title, role, desc, tech, image, link }) {
-    const [isHovered, setIsHovered] = useState(false);]
+    const [isHovered, setIsHovered] = useState(false);
 
     return (
         <div
