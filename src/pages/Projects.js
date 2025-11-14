@@ -45,8 +45,9 @@ export default function Projects() {
                 <h2 style={{ textAlign: 'center', fontSize: '2.5rem' }}>Projects</h2>
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
-                    gap: '2rem',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))',
+                    gap: '2.5rem',
+                    padding: '0 1rem',
                     maxWidth: '1200px',
                     margin: '3rem auto',
                     justifyContent: 'center'
