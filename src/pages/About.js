@@ -70,7 +70,7 @@ export default function About() {
                         marginBottom: '1rem'
                     }}>
                         <iframe
-                            src="/resume.pdf"
+                            src="/NathanKelleyResume.pdf"
                             width="100%"
                             height="600"
                             style={{ border: 'none' }}
@@ -79,7 +79,7 @@ export default function About() {
                     </div>
 
                     <a
-                        href="/resume.pdf"
+                        href="/NathanKelleyResume.pdf"
                         download
                         style={{
                             display: 'inline-block',
