@@ -13,13 +13,13 @@ export default function Footer() {
             <div style={{ marginBottom: '1rem' }}>
                 <h4 style={{ color: '#fff', margin: '0 0 1rem' }}>Connect with Me</h4>
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-                    <a href="https://linkedin.com/in/nathankelley" target="_blank" rel="noopener noreferrer"
+                    <a href="https://linkedin.com/in/nathan-kelley" target="_blank" rel="noopener noreferrer"
                         style={socialStyle}>
                         <i className="fab fa-linkedin"></i>
                     </a>
                     <a href="https://x.com/N_JKelley" target="_blank" rel="noopener noreferrer"
                         style={socialStyle}>
-                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fab fa-x-twitter fa-2x"></i>
                     </a>
                     <a href="https://github.com/nathankelley" target="_blank" rel="noopener noreferrer"
                         style={socialStyle}>
