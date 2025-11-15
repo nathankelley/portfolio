@@ -14,14 +14,15 @@ export default function About() {
                     Nathan Kelley
                 </h1>
                 <p style={{ fontSize: '1.6rem', margin: '0 0 2rem', opacity: 0.9 }}>
-                    <strong>Game Producer</strong> &bull <em>Master's Candidate in Game Production</em>
+                    <strong>Game Producer</strong> &bull; <em>Master of Entertainment Arts and Engineering in Game Production</em>
                 </p>
 
                 {/* Punchy One-Liner */}
                 <p style={{ fontSize: '1.25rem', lineHeight: '1.8', marginBottom: '2.5rem' }}>
-                    I'm a game producer, developer, creative collaborator, and storyteller with hands-on experience
-                    shipping indie titles like Hellbert (hellish puzzle repairs in Unity) and Remnants (post-apoc survival in Godot).
-                    From scope management to sprint planning, I turn chaotic ideas into polished prototypes - all while pursuing my M.S. in Entertainment Arts & Engineering.
+                    I'm a game producer, developer, designer, creative collaborator, and storyteller with hands-on experience
+                    shipping indie titles like Hell*bert, Remnants, and Inferno Inc.
+                    From scope management to sprint planning, I turn chaotic ideas into polished prototypes and shipped titles. 
+                    Let's build something unforgettable together.
                 </p>
 
                 {/* Quick Stats Grid */}
@@ -33,16 +34,16 @@ export default function About() {
                     textAlign: 'center'
                 }}>
                     <div style={statBox}>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#00ff9d' }}>6+</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#00ff9d' }}>3</div>
                         <div>Projects Shipped</div>
                     </div>
                     <div style={statBox}>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#00ff9d' }}>Unity, Godot, C++</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#00ff9d' }}>Unity, Unreal Engine, C++, Miro</div>
                         <div>Core Tools</div>
                     </div>
                     <div style={statBox}>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#00ff9d' }}>M.S. Candidate</div>
-                        <div>Game Production</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#00ff9d' }}>MEAE</div>
+                        <div>Game Production &bull; Project Management</div>
                     </div>
                 </div>
 
@@ -56,8 +57,9 @@ export default function About() {
                 }}>
                     <h3 style={{ color: '#00ff9d', marginBottom: '1rem' }}>Resume</h3>
                     <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-                        Dive deeper into my experience: QA at MasterControl (bug triage, SQL scripting),
-                        lead producer on indie jams, and C++ text adventures from undergrad.
+                        B2B SaaS Technical Support at MasterControl
+                        (bug triage, SQL scripting, customer service, team lead),
+                        lead producer on 3 shipped games and multiple prototypes,
                         Full details below - let's connect on how I can drive your next project.
                     </p>
 
@@ -98,8 +100,8 @@ export default function About() {
 
                 {/* Call to Action */}
                 <p style={{ fontSize: '1.2rem', textAlign: 'center', margin: '3rem 0' }}>
-                    Ready to ship something unforgettable? <Link to="/projects" style={{ color: '#00ff9d' }}>See my work</Link> or
-                    <a href="mailto:kelleyjnathan@gmail.com" style={{ color: '#00ff9d', marginLeft: '1rem' }}>email me</a>.
+                    Ready to ship something unforgettable? <Link to="/projects" style={{ color: '#00ff9d' }}>See my work</Link>
+                    or<a href="mailto:kelleyjnathan@gmail.com" style={{ color: '#00ff9d', marginLeft: '1rem' }}>email me</a>.
                 </p>
             </div>
             <Footer />
