@@ -12,7 +12,7 @@ export default function Home() {
                     Hi, I'm Nathan Kelley
                 </h1>
                 <p style={{ fontsize: '1.5rem', maxWidth: '700px', margin: '0 auto 2rem' }}>
-                    I’m a game producer, developer, creative collaborator,
+                    I'm a game producer, developer, creative collaborator,
                     and storyteller with experience bringing innovative games to life.
                 </p>
                     <Link to="/projects" style={{
