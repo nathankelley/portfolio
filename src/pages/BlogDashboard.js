@@ -61,11 +61,7 @@ export default function BlogDashboard() {
 
     const handleLogin = async () => {
         try {
-            if (window.location.hostname === 'localhost') {
-                await signInWithPopup(auth, provider);
-            } else {
-                await signInWithRedirect(auth, provider);
-            }
+            await signInWithPopup(auth, provider);
         } catch (error) {
             console.error('Login failed:', error);
         }
