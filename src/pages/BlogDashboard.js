@@ -15,6 +15,7 @@ export default function Blog() {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const provider = new GoogleAuthProvider();
+    const [showDenialModal, setShowDenialModal] = useState(false);]
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(setUser);
@@ -34,7 +35,7 @@ export default function Blog() {
             const loggedUser = result.user;
             if (loggedUser.email !== 'kelleyjnathan@gmail.com') {
                 await signOut(auth);
-                alert('Access denied. Better luck next time slugheads.');
+                setShowDenialModal(true); // triggers custom modal
                 return;
             }
         } catch (error) {
@@ -180,7 +181,49 @@ export default function Blog() {
                 </article>
             ))}
         </div>
-        <Footer />
+            <Footer />
+
+            {showDenialModal && (
+                <div style={{
+                    position: 'fixed',
+                    top: 0, left: 0, right: 0, bottom: 0,
+                    background: 'rgba(0,0,0,0.9)',
+                    zIndex: 1000,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                }} onClick={() => setShowDenialModal(false)}>
+                    <div style={{
+                        background: 'linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%)',
+                        padding: '2rem',
+                        borderRadius: '12px',
+                        border: '2px solid #00ff9d',
+                        textAlign: 'center',
+                        maxWidth: '400px',
+                        boxShadow: '0 0 20px rgba(0,255,157,0.3)'
+                    }} onClick={(e) => e.stopPropagation()}>
+                        <h2 style={{ color: '#00ff9d', marginBottom: '1rem' }}>Access Denied</h2>
+                        <p style={{ fontSize: '1.1rem', lineHeight: '1.5', marginBottom: '1.5rem' }}>
+
+                            Access Denied. Better luck next time slugheads.
+
+                        </p>
+                        <button
+                            onClick={() => setShowDenialModal(false)}
+                            style={{
+                                padding: '0.75rem 1.5rem',
+                                background: '#ff4444',
+                                color: '#fff',
+                                border: 'none',
+                                borderRadius: '8px',
+                                fontWeight: 'bold',
+                                cursor: 'pointer'
+                            }}>
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
     </div>
   );
 }
