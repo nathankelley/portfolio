@@ -30,7 +30,13 @@ export default function Blog() {
 
     const handleLogin = async () => {
         try {
-            await signInWithPopup(auth, provider);
+            const result = await signInWithPopup(auth, provider);
+            const loggedUser = result.user;
+            if (loggedUser.email !== 'kelleyjnathan@gmail.com') {
+                await signOut(auth);
+                alert('Access denied. Better luck next time slugheads.');
+                return;
+            }
         } catch (error) {
             console.error('Login failed:', error);
         }
