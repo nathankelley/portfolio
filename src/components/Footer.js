@@ -19,7 +19,7 @@ export default function Footer() {
                     </a>
                     <a href="https://x.com/N_JKelley" target="_blank" rel="noopener noreferrer"
                         style={socialStyle}>
-                        <i class="fab fa-x-twitter"></i>
+                        <i className="fab fa-x-twitter"></i>
                     </a>
                     <a href="https://github.com/nathankelley" target="_blank" rel="noopener noreferrer"
                         style={socialStyle}>
