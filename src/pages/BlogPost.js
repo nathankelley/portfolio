@@ -14,7 +14,7 @@ export default function BlogPost() {
         const fecthPost = async () => {
             const docSnap = await getDoc(doc(db, 'posts', id));
             if (docSnap.exists()) {
-                setPost({ id; docSnap.id, ...docSnap.data() });
+                setPost({ id: docSnap.id, ...docSnap.data() });
             }
             setLoading(fasle);
         };
