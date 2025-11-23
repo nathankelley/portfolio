@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { collection, getDocs, orderBy, query } from 'firebase/firestore';
 import { db } from '../firebase';
+import BackgroundBlobs from '../components/BackgroundBlob';
 
 export default function Blog() {
     const [posts, setPosts] = useState([]);  
@@ -27,6 +28,7 @@ export default function Blog() {
     return (
         <div style={{ background: '#0f0f0f', color: '#fff', minHeight: '100vh' }}>
             <Header />
+            <BackgroundBlobs />
             <div style={{ padding: '4rem 10%', maxWidth: '900px', margin: '0 auto' }}>
                 <h1 style={{ textAlign: 'center', fontSize: '2.5rem', color: '#00ff9d', marginBottom: '2rem' }}>
                     Blog: My Game Production Journey

@@ -1,108 +1,136 @@
-import { useEffect, useRef } from 'react';
-import * as THREE from 'three';
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
+﻿import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
-    const canvasRef = useRef();
-    const sceneRef = useRef();
-    const rendererRef = useRef();
-
     useEffect(() => {
-        // Setup Three.js scene
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current, alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        rendererRef.current = renderer;
+        const cursor = document.querySelector('.custom-cursor');
+        const blobs = document.querySelectorAll('.blob');
+        const heroName = document.querySelector('.hero-name');
 
-        // Fiery particles
-        const particlesGeometry = new THREE.BufferGeometry();
-        const particleCount = 1000;
-        const positions = new Float32Array(particleCount * 3);
-        const colors = new Float32Array(particleCount * 3);
+        // Mouse follower
+        const handleMouseMove = (e) => {
+            const { clientX, clientY } = e;
+            cursor.style.left = `${clientX}px`;
+            cursor.style.top = `${clientY}px`;
 
-        for (let i = 0; i < particleCount * 3; i += 3) {
-            positions[i] = (Math.random() - 0.5) * 10;
-            positions[i + 1] = (Math.random() - 0.5) * 10;
-            positions[i + 2] = (Math.random() - 0.5) * 10;
-
-            // Fiery colors
-            colors[i] = Math.random() * 0.5 + 0.5;  // Red/orange
-            colors[i + 1] = Math.random() * 0.3;
-            colors[i + 2] = 0;
-        }
-
-        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-        particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-
-        const particlesMaterial = new THREE.PointsMaterial({ size: 0.02, vertexColors: true });
-        const particles = new THREE.Points(particlesGeometry, particlesMaterial);
-        scene.add(particles);
-
-        camera.position.z = 5;
-
-        // Morph name (text to particles)
-        const loader = new THREE.FontLoader();
-        loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', (font) => {
-            const textGeometry = new THREE.TextGeometry('Nathan Kelley', {
-                font: font,
-                size: 0.5,
-                height: 0.1
+            blobs.forEach((blob, i) => {
+                gsap.to(blob, {
+                    x: (clientX - window.innerWidth / 2) * (0.05 + i * 0.03),
+                    y: (clientY - window.innerHeight / 2) * (0.05 + i * 0.03),
+                    duration: 3,
+                    ease: 'power2.out'
+                });
             });
-            const textMesh = new THREE.Mesh(textGeometry, new THREE.MeshBasicMaterial({ color: 0x00ff9d }));
-            scene.add(textMesh);
+        };
 
-            // Animate: particles swirl in, form text, then morph to icons
-            gsap.to(particles.rotation, { duration: 2, y: Math.PI * 2, repeat: -1, ease: 'none' });
-            gsap.fromTo(textMesh.scale,
-                { x: 0, y: 0, z: 0 },
-                { duration: 2, x: 1, y: 1, z: 1, delay: 1, ease: 'back.out(1.7)' }
-            );
-            gsap.to(textMesh.position, { duration: 1, y: -0.5, delay: 3 });  // Drop to baseline
+        // Pulse cursor on interactive elements
+        const handleMouseOver = (e) => {
+            if (e.target.closest('a, button')) gsap.to(cursor, { scale: 1.5, duration: 0.3 });
+        };
+        const handleMouseOut = (e) => {
+            if (e.target.closest('a, button')) gsap.to(cursor, { scale: 1, duration: 0.3 });
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('mouseover', handleMouseOver);
+        document.addEventListener('mouseout', handleMouseOut);
+
+        // Blob drift
+        gsap.to('.blob', {
+            x: 'random(-100, 100)',
+            y: 'random(-100, 100)',
+            scale: 'random(0.8, 1.4)',
+            rotation: 'random(-30, 30)',
+            duration: 'random(8, 15)',
+            ease: 'none',
+            repeat: -1,
+            yoyo: true
         });
 
-        // Animate CTA
-        const button = document.querySelector('.cta-button');
-        if (button) {
-            button.addEventListener('mouseenter', () => gsap.to(button, { scale: 1.05, duration: 0.3 }));
-            button.addEventListener('mouseleave', () => gsap.to(button, { scale: 1, duration: 0.3 }));
+        // Name animation — now safe
+        if (heroName) {
+            gsap.fromTo(heroName,
+                { scale: 0, opacity: 0, filter: 'blur(20px)' },
+                { scale: 1, opacity: 1, filter: 'blur(0px)', duration: 2, ease: 'elastic.out(1,0.5)', delay: 0.5 }
+            );
         }
 
-        // Render loop
-        function animate() {
-            requestAnimationFrame(animate);
-            particles.rotation.y += 0.001;
-            renderer.render(scene, camera);
-        }
-        animate();
+        // CTA pulse
+        gsap.to('.cta-button', {
+            scale: 1.05,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            ease: 'power1.inOut'
+        });
 
-        sceneRef.current = scene;
-        return () => renderer.dispose();
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseover', handleMouseOver);
+            document.removeEventListener('mouseout', handleMouseOut);
+        };
     }, []);
 
     return (
-        <div style={{ minHeight: '100vh', background: '#0f0f0f', color: '#fff', position: 'relative' }}>
-            <canvas ref={canvasRef} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }} />
-            <Header style={{ position: 'relative', zIndex: 2 }} />
-            <main style={{ padding: '4rem 2rem', textAlign: 'center', position: 'relative', zIndex: 1 }}>
-                <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>
-                    Hi, I'm Nathan Kelley
-                </h1>
-                <p style={{ fontSize: '1.5rem', maxWidth: '700px', margin: '0 auto 2rem' }}>
-                    Game Producer & Developer with experience shipping innovative titles.
-                    I turn chaos into milestones and ideas into playable realities.
-                </p>
-                <Link to="/projects" className="cta-button" style={{
-                    padding: '1rem 2rem', background: '#00ff9d', color: '#000',
-                    borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold'
+        <div style={{ minHeight: '100vh', background: '#000', color: '#fff', overflow: 'hidden', position: 'relative', cursor: 'none' }}>
+            {/* Custom Cursor — always on top, never hidden */}
+            <div className="custom-cursor" style={{
+                position: 'fixed',
+                width: '36px',
+                height: '36px',
+                border: '3px solid #00ff9d',
+                borderRadius: '50%',
+                pointerEvents: 'none',
+                zIndex: 99999,
+                transform: 'translate(-50%, -50%)',
+                boxShadow: '0 0 30px #00ff9d, inset 0 0 15px rgba(0,255,157,0.6)',
+                background: 'radial-gradient(circle, rgba(0,255,157,0.2) 0%, transparent 70%)',
+                transition: 'transform 0.15s ease',
+                mixBlendMode: 'difference'
+            }} />
+
+            {/* Liquid Fire Blobs */}
+            <div className="blob" style={{ position: 'absolute', width: '600px', height: '600px', background: 'radial-gradient(circle at 30% 30%, #ff0066, transparent 70%)', borderRadius: '47% 53% 70% 30% / 40% 40% 60% 60%', filter: 'blur(80px)', opacity: 0.6, top: '-200px', left: '-200px' }} />
+            <div className="blob" style={{ position: 'absolute', width: '800px', height: '800px', background: 'radial-gradient(circle at 70% 70%, #00ff9d, transparent 70%)', borderRadius: '37% 63% 50% 50% / 50% 40% 60% 50%', filter: 'blur(100px)', opacity: 0.5, bottom: '-300px', right: '-300px' }} />
+            <div className="blob" style={{ position: 'absolute', width: '500px', height: '500px', background: 'radial-gradient(circle, #ff6600, transparent 60%)', borderRadius: '60% 40% 30% 70% / 50% 60% 40% 50%', filter: 'blur(90px)', opacity: 0.7, top: '20%', left: '10%' }} />
+
+            <Header style={{ position: 'relative', zIndex: 10 }} />
+
+            <main style={{ padding: '10rem 2rem 4rem', textAlign: 'center', position: 'relative', zIndex: 5 }}>
+                <h1 className="hero-name" style={{
+                    fontSize: '5rem',
+                    fontWeight: '900',
+                    background: 'linear-gradient(45deg, #00ff9d, #00ccff, #ff0066)',
+                    backgroundClip: 'text',
+                    WebkitBackgroundClip: 'text',
+                    color: 'transparent',
+                    letterSpacing: '0.1em'
                 }}>
-                    See My Work
+                    NATHAN KELLEY
+                </h1>
+
+                <p style={{ fontSize: '1.9rem', margin: '2rem auto', maxWidth: '700px', opacity: 0.95, letterSpacing: '0.1em' }}>
+                    Game Producer · World Builder Chaos Tamer
+                </p>
+
+                <Link to="/projects" className="cta-button" style={{
+                    padding: '1.2rem 3rem',
+                    background: '#00ff9d',
+                    color: '#000',
+                    borderRadius: '50px',
+                    textDecoration: 'none',
+                    fontWeight: 'bold',
+                    fontSize: '1.3rem',
+                    boxShadow: '0 0 30px rgba(0,255,157,0.5)',
+                    display: 'inline-block'
+                }}>
+                    ENTER MY WORLD
                 </Link>
             </main>
+
             <Footer />
         </div>
     );

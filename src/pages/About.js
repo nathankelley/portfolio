@@ -1,12 +1,14 @@
-// src/pages/About.js
+﻿// src/pages/About.js
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import BackgroundBlobs from '../components/BackgroundBlob';
 import { Link } from 'react-router-dom';
 
 export default function About() {
     return (
         <div style={{ background: '#0f0f0f', color: '#fff', minHeight: '100vh' }}>
             <Header />
+            <BackgroundBlobs />
             <div style={{ padding: '5rem 10%', maxWidth: '900px', margin: '0 auto' }}>
 
                 {/* Hero Bio */}

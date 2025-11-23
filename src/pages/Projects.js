@@ -1,7 +1,8 @@
-// src/pages/Projects.js
+﻿// src/pages/Projects.js
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProjectCard from '../components/ProjectCard';
+import BackgroundBlobs from '../components/BackgroundBlob';
 
 // Screenshots in the 'src/assets/images' directory
 // Hellbert Screenshots
@@ -43,6 +44,7 @@ export default function Projects() {
     return (
         <div style={{ background: '#0f0f0f', color: '#fff', minHeight: '100vh' }}>
             <Header />
+            <BackgroundBlobs />
             <div style={{ padding: '4rem 2rem' }}>
                 <h2 style={{ textAlign: 'center', fontSize: '2.5rem' }}>Projects</h2>
                 <div style={{

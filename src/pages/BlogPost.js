@@ -1,9 +1,10 @@
-import { useParams, Link } from 'react-router-dom';
+﻿import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { doc, getDoc } from 'firebase/firestore'; 
 import { db } from '../firebase'; // Adjust the import path as necessary
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import BackgroundBlobs from '../components/BackgroundBlob';
 
 export default function BlogPost() {
     const { id } = useParams();
@@ -27,6 +28,7 @@ export default function BlogPost() {
     return (
         <div style={{ background: '#0f0f0f', color: '#fff', minHeight: '100vh' }}>
             <Header />
+            <BackgroundBlobs />
             <div style={{ padding: '4rem 10%', maxWidth: '800px', margin: '0 auto' }}>
                 <Link to="/blog" style={{ color: '#00ff9d', textDecoration: 'none', fontSize: '1rem' }}>
                     Back to all posts
