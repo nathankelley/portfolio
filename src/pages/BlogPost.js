@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { doc, getDoc } from 'firebase/firestore'; 
 import { db } from '../firebaseConfig'; // Adjust the import path as necessary
@@ -11,12 +11,12 @@ export default function BlogPost() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const fecthPost = async () => {
+        const fetchPost = async () => {
             const docSnap = await getDoc(doc(db, 'posts', id));
             if (docSnap.exists()) {
                 setPost({ id: docSnap.id, ...docSnap.data() });
             }
-            setLoading(fasle);
+            setLoading(false);
         };
         fetchPost();
     }, [id]);
