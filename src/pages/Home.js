@@ -113,7 +113,7 @@ export default function Home() {
                 </h1>
 
                 <p style={{ fontSize: '1.9rem', margin: '2rem auto', maxWidth: '700px', opacity: 0.95, letterSpacing: '0.1em' }}>
-                    Game Producer · World Builder Chaos Tamer
+                    Game Producer · World Builder · Chaos Tamer
                 </p>
 
                 <Link to="/projects" className="cta-button" style={{
