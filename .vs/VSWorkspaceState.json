@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\assets\\images",
     "\\src\\components",
     "\\src\\pages"
   ],
-  "SelectedNode": "\\src\\pages\\About.js",
+  "SelectedNode": "\\src\\components\\Footer.js",
   "PreviewInSolutionExplorer": false
 }
