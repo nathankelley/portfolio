@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { doc, getDoc } from 'firebase/firestore'; 
-import { db } from '../firebaseConfig'; // Adjust the import path as necessary
+import { db } from '../firebase'; // Adjust the import path as necessary
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
