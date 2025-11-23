@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
 import { gsap } from 'gsap';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
