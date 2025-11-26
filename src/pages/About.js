@@ -38,9 +38,11 @@ export default function About() {
                     <div style={statBox}>
                         <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#00ff9d' }}>3</div>
                         <div>Projects Shipped</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#00ff9d' }}>1</div>
+                        <div>Projects In Development</div>
                     </div>
                     <div style={statBox}>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#00ff9d' }}>Unity, Unreal Engine, Miro</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#00ff9d' }}>Unity &bull; Unreal Engine &bull; Miro &bull; WBS &bull; Kanban</div>
                         <div>Core Tools</div>
                     </div>
                     <div style={statBox}>

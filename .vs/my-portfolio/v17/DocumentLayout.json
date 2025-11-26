@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\kelle\\my-portfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kelle\\my-portfolio\\src\\pages\\BlogDashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\BlogDashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kelle\\my-portfolio\\src\\pages\\Home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kelle\\my-portfolio\\src\\pages\\BlogPost.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\BlogPost.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kelle\\my-portfolio\\src\\pages\\Projects.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Projects.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BlogDashboard.js",
-              "DocumentMoniker": "C:\\Users\\kelle\\my-portfolio\\src\\pages\\BlogDashboard.js",
-              "RelativeDocumentMoniker": "src\\pages\\BlogDashboard.js",
-              "ToolTip": "C:\\Users\\kelle\\my-portfolio\\src\\pages\\BlogDashboard.js",
-              "RelativeToolTip": "src\\pages\\BlogDashboard.js",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEMAAAAGAAAAAAAAAA==",
+              "Title": "Home.js",
+              "DocumentMoniker": "C:\\Users\\kelle\\my-portfolio\\src\\pages\\Home.js",
+              "RelativeDocumentMoniker": "src\\pages\\Home.js",
+              "ToolTip": "C:\\Users\\kelle\\my-portfolio\\src\\pages\\Home.js",
+              "RelativeToolTip": "src\\pages\\Home.js",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHMAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-15T23:11:51.273Z",
+              "WhenOpened": "2025-11-23T07:07:26.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BlogPost.js",
+              "DocumentMoniker": "C:\\Users\\kelle\\my-portfolio\\src\\pages\\BlogPost.js",
+              "RelativeDocumentMoniker": "src\\pages\\BlogPost.js",
+              "ToolTip": "C:\\Users\\kelle\\my-portfolio\\src\\pages\\BlogPost.js",
+              "RelativeToolTip": "src\\pages\\BlogPost.js",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwB0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-23T07:03:16.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Projects.js",
+              "DocumentMoniker": "C:\\Users\\kelle\\my-portfolio\\src\\pages\\Projects.js",
+              "RelativeDocumentMoniker": "src\\pages\\Projects.js",
+              "ToolTip": "C:\\Users\\kelle\\my-portfolio\\src\\pages\\Projects.js",
+              "RelativeToolTip": "src\\pages\\Projects.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-23T07:00:34.328Z",
               "EditorCaption": ""
             }
           ]

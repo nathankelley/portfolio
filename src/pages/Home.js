@@ -127,7 +127,7 @@ export default function Home() {
                     boxShadow: '0 0 30px rgba(0,255,157,0.5)',
                     display: 'inline-block'
                 }}>
-                    ENTER MY WORLD
+                    Portfolio
                 </Link>
             </main>
 
