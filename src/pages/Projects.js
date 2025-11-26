@@ -24,7 +24,7 @@ import inferno_1 from '../assets/images/InfernoInc/Title_page.png';
 import inferno_2 from '../assets/images/InfernoInc/intro.png';
 import inferno_3 from '../assets/images/InfernoInc/first_puzzle.png';
 import inferno_4 from '../assets/images/InfernoInc/lust_1.png';
-import inferno_5 from '../assets/images/InfernoInc/lust_2.jpg';
+import inferno_5 from '../assets/images/InfernoInc/lust_2.png';
 import inferno_6 from '../assets/images/InfernoInc/Team-4.jpg';
 
 const projects = [
