@@ -2,9 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\assets",
+    "\\src\\assets\\images",
+    "\\src\\assets\\images\\InfernoInc",
     "\\src\\components",
     "\\src\\pages"
   ],
-  "SelectedNode": "\\src\\pages\\Home.js",
+  "SelectedNode": "\\src\\components\\Header.js",
   "PreviewInSolutionExplorer": false
 }

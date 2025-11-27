@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BackgroundBlobs from '../components/BackgroundBlob';
 import { Link } from 'react-router-dom';
+import GameCarousel from '../components/GameCarousel';
 
 export default function About() {
     return (
@@ -101,6 +102,9 @@ export default function About() {
                         Download Resume (PDF)
                     </a>
                 </section>
+
+                {/* Game Carousel */}
+                <GameCarousel />
 
                 {/* Call to Action */}
                 <p style={{ fontSize: '1.2rem', textAlign: 'center', margin: '3rem 0' }}>
