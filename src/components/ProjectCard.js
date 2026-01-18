@@ -1,8 +1,9 @@
-// src/components/ProjectCard.js
+﻿// src/components/ProjectCard.js
 import { useState } from 'react';
 import Lightbox from './Lightbox';
 
-export default function ProjectCard({ title, role, desc, tech, image, link, gallery = [] }) {
+export default function ProjectCard({ title, role, desc, tech, image, link, gallery = [],
+    inProgress = false }) {
     const [isHovered, setIsHovered] = useState(false);
     const [showLightbox, setShowLightbox] = useState(false);
 
@@ -18,13 +19,34 @@ export default function ProjectCard({ title, role, desc, tech, image, link, gall
                 style={{
                     ...styles.card,
                     ...(isHovered ? styles.cardHover : {}),
-                    cursor: gallery.length > 0 ? 'zoom-in' : 'default'
+                    cursor: gallery.length > 0 ? 'zoom-in' : 'default',
+                    position: 'relative'
                 }}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 onClick={handleCardClick}  // Dedicated click handler
             >
                 <img src={image} alt={title} style={styles.img} />
+
+                {/* IN PROGRESS BADGE — put right here */}
+                {inProgress && (
+                    <span style={{
+                        position: 'absolute',
+                        top: '12px',
+                        right: '12px',
+                        background: '#ff6600',
+                        color: '#fff',
+                        padding: '0.5rem 1rem',
+                        borderRadius: '8px',
+                        fontSize: '0.85rem',
+                        fontWeight: 'bold',
+                        boxShadow: '0 4px 12px rgba(255,102,0,0.4)',
+                        zIndex: 10
+                    }}>
+                        In Progress
+                    </span>
+                )}
+
                 <div style={styles.content}>
                     <h3 style={styles.title}>{title}</h3>
                     <p><strong>Role:</strong> {role}</p>

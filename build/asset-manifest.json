@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.e6c13ad2.css",
-    "main.js": "/portfolio/static/js/main.5e700bcd.js",
+    "main.js": "/portfolio/static/js/main.10bad431.js",
     "static/media/Team Photo.jpg": "/portfolio/static/media/Team Photo.81ec7a3b95e4652736ce.jpg",
     "static/media/S2.png": "/portfolio/static/media/S2.56b13e063b9b52a5a56a.png",
     "static/media/S3.png": "/portfolio/static/media/S3.2f5d0b747fef777b3046.png",
@@ -16,14 +16,19 @@
     "static/media/Title_page.png": "/portfolio/static/media/Title_page.42e5b9afed1056623f92.png",
     "static/media/ss.3.png": "/portfolio/static/media/ss.3.368e974ef27b9ab0f7cb.png",
     "static/media/ss.2.png": "/portfolio/static/media/ss.2.5b6f27dd85eb8fa0bec5.png",
+    "static/media/elden_ring.jpg": "/portfolio/static/media/elden_ring.c23844c70a758566b286.jpg",
     "static/media/ss.1.png": "/portfolio/static/media/ss.1.80abb1be4cd5c50efe19.png",
     "static/media/ss.4.png": "/portfolio/static/media/ss.4.ff9a3a215d07b9d94c08.png",
+    "static/media/cs_2.jpg": "/portfolio/static/media/cs_2.2097a4745e8c509f1f82.jpg",
+    "static/media/skyrim.jpg": "/portfolio/static/media/skyrim.65c824ec15d27af455e0.jpg",
+    "static/media/halo_reach.jpg": "/portfolio/static/media/halo_reach.d4db265ffd2f186ff23d.jpg",
+    "static/media/zelda_ocarina.jpg": "/portfolio/static/media/zelda_ocarina.d7b6b5b0ee8cfec6d552.jpg",
     "index.html": "/portfolio/index.html",
     "main.e6c13ad2.css.map": "/portfolio/static/css/main.e6c13ad2.css.map",
-    "main.5e700bcd.js.map": "/portfolio/static/js/main.5e700bcd.js.map"
+    "main.10bad431.js.map": "/portfolio/static/js/main.10bad431.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.5e700bcd.js"
+    "static/js/main.10bad431.js"
   ]
 }

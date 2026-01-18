@@ -4,10 +4,12 @@
     "\\src",
     "\\src\\assets",
     "\\src\\assets\\images",
-    "\\src\\assets\\images\\InfernoInc",
+    "\\src\\assets\\images\\3DCharacterDesign",
+    "\\src\\assets\\images\\3DCharacterDesign\\vroid",
+    "\\src\\assets\\images\\DungeonAdventure",
     "\\src\\components",
     "\\src\\pages"
   ],
-  "SelectedNode": "\\src\\components\\Header.js",
+  "SelectedNode": "\\src\\pages\\BlogDashboard.js",
   "PreviewInSolutionExplorer": false
 }
