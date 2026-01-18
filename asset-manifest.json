@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.e6c13ad2.css",
-    "main.js": "/portfolio/static/js/main.10bad431.js",
+    "main.js": "/portfolio/static/js/main.f6b2d19b.js",
     "static/media/Team Photo.jpg": "/portfolio/static/media/Team Photo.81ec7a3b95e4652736ce.jpg",
     "static/media/S2.png": "/portfolio/static/media/S2.56b13e063b9b52a5a56a.png",
     "static/media/S3.png": "/portfolio/static/media/S3.2f5d0b747fef777b3046.png",
@@ -19,16 +19,20 @@
     "static/media/elden_ring.jpg": "/portfolio/static/media/elden_ring.c23844c70a758566b286.jpg",
     "static/media/ss.1.png": "/portfolio/static/media/ss.1.80abb1be4cd5c50efe19.png",
     "static/media/ss.4.png": "/portfolio/static/media/ss.4.ff9a3a215d07b9d94c08.png",
+    "static/media/model1_3.png": "/portfolio/static/media/model1_3.d67e25bebd19c7af9082.png",
+    "static/media/model1_1.png": "/portfolio/static/media/model1_1.f2a48bd7db9d84e43a7e.png",
+    "static/media/model1_2.png": "/portfolio/static/media/model1_2.72f01bb81cd75c0b53af.png",
+    "static/media/dungeon_1.jpg": "/portfolio/static/media/dungeon_1.724805943421380c16cb.jpg",
     "static/media/cs_2.jpg": "/portfolio/static/media/cs_2.2097a4745e8c509f1f82.jpg",
     "static/media/skyrim.jpg": "/portfolio/static/media/skyrim.65c824ec15d27af455e0.jpg",
     "static/media/halo_reach.jpg": "/portfolio/static/media/halo_reach.d4db265ffd2f186ff23d.jpg",
     "static/media/zelda_ocarina.jpg": "/portfolio/static/media/zelda_ocarina.d7b6b5b0ee8cfec6d552.jpg",
     "index.html": "/portfolio/index.html",
     "main.e6c13ad2.css.map": "/portfolio/static/css/main.e6c13ad2.css.map",
-    "main.10bad431.js.map": "/portfolio/static/js/main.10bad431.js.map"
+    "main.f6b2d19b.js.map": "/portfolio/static/js/main.f6b2d19b.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.10bad431.js"
+    "static/js/main.f6b2d19b.js"
   ]
 }
